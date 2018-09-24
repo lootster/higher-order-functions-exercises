@@ -1,21 +1,25 @@
 function multiplyBy10(array) {
-  return array;
+  const result = array.map(element => element * 10);
+  return result;
 }
+
 
 function onlyVowels(array) {
-  return array;
+  return array.map(word => word.match(/[aeiou]/g).join(''));
 }
+
 
 function multiplyBy2(array) {
-  return array;
+  return array.map(element => element * 2);
 }
 
-function doubleMatrix(array) {
-  return array;
+function doubleMatrix(matrix) {
+  return matrix.map(multiplyBy2);
+  //return matrix.map(array => multiplyBy2(array));
 }
 
 function onlyNames(array) {
-  return array;
+  return array.map(element => element.name);
 }
 
 module.exports = {
@@ -25,3 +29,5 @@ module.exports = {
   doubleMatrix: doubleMatrix,
   onlyNames: onlyNames
 };
+
+
